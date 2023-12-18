@@ -71,16 +71,6 @@ export default {
   flex-direction: column;
 }
 
-.title {
-  font-family: serif;
-  text-align: center;
-  margin: 30px;
-  color: #fef9e1;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 6px 12px 9px grey;
-}
-
 .brewery-container {
   display: flex;
   justify-content: center;

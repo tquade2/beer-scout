@@ -1,35 +1,21 @@
 <template>
-  <section id="bodyHome">
+  <div id="home">
     <main>
-      <header>
-        <h1 class="title">Welcome to BrewScout</h1>
-      </header>
+      <h1 class="title">Welcome to BeerScout</h1>
+      <image></image>
     </main>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-#bodyHome {
-  display: block;
-  background-image: url("/icons/breweryBackground3.jpg");
-  background-size: cover;
-  height: 800px;
-  width: 2000px;
-}
-.title {
-  background-color: #f4a23f;
-  color: #fef9e1;
-  border-radius: 10px;
-  box-shadow: inset;
-  box-shadow: 6px 12px 9px black;
-  margin-top: 15vh;
-  margin-left: 50vw;
-  width: 600px;
-  font-size: 100px;
-}
-
-header {
+#home {
   display: flex;
   justify-content: center;
+  align-items: top;
+  background-image: url("/images/homeViewBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 90vh;
 }
 </style>

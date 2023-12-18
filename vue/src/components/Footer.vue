@@ -1,8 +1,8 @@
 <template>
   <div id="info">
-    <p class="name">BrewScout</p>
-    <p>info@brewscout.com</p>
-    <p>© 2023 BrewScout</p>
+    <p class="name">BeerScout</p>
+    <p>info@beerscout.com</p>
+    <p>© 2023 BeerScout</p>
   </div>
 </template>
 

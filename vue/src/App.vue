@@ -1,11 +1,13 @@
 <template>
-  <div id="capstone-app">
-    <div id="nav">
-      <Header class="header" />
-      <div class="content">
-        <router-view />
-      </div>
-      <Footer class="footer" />
+  <div id="app">
+    <div class="nav">
+      <Header />
+    </div>
+    <main>
+      <router-view />
+    </main>
+    <div id="foot">
+      <Footer />
     </div>
   </div>
 </template>
@@ -17,28 +19,19 @@ import Footer from "./components/Footer.vue";
 export default { components: { Header, Footer } };
 </script>
 
-<style scoped>
+<style>
 #capstone-app {
-  display: flex;
-  flex-direction: column;
   background-color: #fef9e1;
-  min-height: 97vh;
 }
 
-#nav {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.footer {
-  flex-shrink: 0;
+.title {
+  background-color: #f4a23f;
+  color: #fef9e1;
+  box-shadow: 6px 12px 9px black;
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  font-size: xx-large;
 }
 </style>

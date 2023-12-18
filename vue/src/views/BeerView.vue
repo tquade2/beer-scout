@@ -51,18 +51,6 @@ export default {
 </script>
 
 <style>
-.title {
-  font-family: serif;
-  text-align: center;
-  margin: 30px;
-  background-color: #4a2328;
-  color: #fef9e1;
-  border-radius: 10px;
-  padding: 10px;
-  width: relative;
-  box-shadow: 6px 12px 9px grey;
-}
-
 .title-container {
   display: flex;
   justify-content: center;

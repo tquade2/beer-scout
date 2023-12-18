@@ -2,16 +2,16 @@ USE master
 GO
 
 --drop database if it exists
-IF DB_ID('final_capstone') IS NOT NULL
+IF DB_ID('beer_scout_db') IS NOT NULL
 BEGIN
-	ALTER DATABASE final_capstone SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-	DROP DATABASE final_capstone
+	ALTER DATABASE beer_scout_db SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+	DROP DATABASE beer_scout_db
 END
 
-CREATE DATABASE final_capstone
+CREATE DATABASE beer_scout_db
 GO
 
-USE final_capstone
+USE beer_scout_db
 GO
 
 --create tables
