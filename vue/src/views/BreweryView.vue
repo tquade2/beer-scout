@@ -1,13 +1,11 @@
 <template>
   <div class="content">
-    <h1>Brewery List</h1>
-    <div>
-      <brewery
-        v-for="brewery in breweries"
-        v-bind:key="brewery.id"
-        v-bind:item="brewery"
-      />
-    </div>
+    <h1>Breweries</h1>
+    <brewery
+      v-for="brewery in breweries"
+      v-bind:key="brewery.id"
+      v-bind:item="brewery"
+    />
   </div>
 </template>
 

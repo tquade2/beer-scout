@@ -18,6 +18,12 @@ export default { components: { Header } };
   background-color: #fef9e1;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   display: flex;
   justify-content: center;
@@ -37,7 +43,6 @@ h1 {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 50vw;
 }
 
@@ -47,12 +52,14 @@ h1 {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-  background-color: #c570615c;
-  text-decoration: none;
   color: #4a2328;
+  background-color: #c570615c;
   font-family: sans-serif;
-  padding: 5px;
+  text-decoration: none;
+  padding: 10px;
   margin: 10px;
+  width: 50%;
+  min-width: 300px;
 }
 
 .nav {
@@ -87,5 +94,12 @@ h1 {
   text-decoration: none;
   border-radius: 25px;
   white-space: nowrap;
+}
+
+hr {
+  width: 95%;
+  border-color: #4a2328;
+  border-style: solid;
+  margin-top: 0;
 }
 </style>

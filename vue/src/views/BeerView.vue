@@ -1,13 +1,7 @@
 <template>
-  <div>
-    <div class="content">
-      <h1>Beer List</h1>
-      <beer
-        v-for="beer in beers"
-        v-bind:key="beer.id"
-        v-bind:item="beer"
-      ></beer>
-    </div>
+  <div class="content">
+    <h1>Beers</h1>
+    <beer v-for="beer in beers" v-bind:key="beer.id" v-bind:item="beer" />
   </div>
 </template>
 
