@@ -1,7 +1,7 @@
 <template>
-  <div class="about">
-    <section>
-      <h2>Our Story</h2>
+  <h1>Our Story</h1>
+  <div class="content">
+    <div>
       <p>
         BrewScout was born out of a shared love for great beer and a desire to
         make the craft beer experience more accessible to everyone. Taylor,
@@ -10,8 +10,8 @@
         skills in web development and their appreciation for the rich tapestry
         of flavors that craft breweries offer.
       </p>
-    </section>
-    <section>
+    </div>
+    <div>
       <h2>What is BrewScout?</h2>
       <p>
         BrewScout is your go-to destination for discovering and exploring the
@@ -21,8 +21,8 @@
         dipping your toes into the craft beer scene, BrewScout is your trusted
         companion for finding the perfect pint.
       </p>
-    </section>
-    <section>
+    </div>
+    <div>
       <h2>What We Offer</h2>
       <h3>Beer & Brewery Finder</h3>
       <p>
@@ -37,8 +37,8 @@
         reviews, and recommendations. Connect with like-minded individuals who
         share your passion for craft beer.
       </p>
-    </section>
-    <section>
+    </div>
+    <div>
       <h2>Our Commitment</h2>
       <p>
         At BrewScout, we are committed to promoting responsible drinking and
@@ -47,23 +47,21 @@
         you're not just discovering amazing beers; you're also supporting the
         talented brewers and businesses that make them possible.
       </p>
-    </section>
-    <section>
+    </div>
+    <div>
       <h2>Get in Touch</h2>
       <p>
         We love hearing from our users! Whether you have feedback, suggestions,
         or just want to chat about your latest beer adventure, feel free to
         reach out to us. You can contact Taylor, Garrett, and Daniel directly
         through our
-        <a href="mailto:info@brewscout.com">email</a>.
+        <a href="mailto:tay.quade@gmail.com">email</a>.
       </p>
-    </section>
-    <footer>
-      <p>
-        Thank you for choosing BrewScout as your beer companion. Cheers to great
-        beer, new friendships, and unforgettable experiences!
-      </p>
-    </footer>
+    </div>
+    <p class="footer">
+      Thank you for choosing BrewScout as your beer companion. Cheers to great
+      beer, new friendships, and unforgettable experiences!
+    </p>
   </div>
 </template>
 
@@ -72,36 +70,14 @@ export default {};
 </script>
 
 <style scoped>
-.about {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffc1765c;
-  box-shadow: inset;
-  box-shadow: 6px 12px 9px grey;
-  border-radius: 10px;
-}
-
-section {
-  margin-bottom: 30px;
-  color: #4a2328;
-}
-
 h2 {
   color: #4a2328;
   text-align: center;
   border-bottom: 2px solid #4a2328;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
 }
 
 h3 {
   color: #4a2328;
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.6;
 }
 
 a {
@@ -110,18 +86,8 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: 30px;
+.footer {
   text-align: center;
-  color: #555;
-}
-
-footer p {
   font-style: italic;
-  font-weight: bold;
 }
 </style>

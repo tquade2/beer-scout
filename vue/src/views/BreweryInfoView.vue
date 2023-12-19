@@ -6,37 +6,41 @@
         v-bind:src="brewery.logo"
         onerror="this.onerror=null; this.src='/icons/altBarrel.png'"
       />
-      <h1>
+      <h1 class="title">
         {{ brewery.name }}
       </h1>
     </header>
     <div class="brewery-info">
       <div class="contact-info">
         <p class="address">
-          {{ brewery.streetAddress }}, {{ brewery.city }}, {{ brewery.state }}
-          {{ brewery.zip }}
+          <a class="link" target="_blank" v-bind:href="brewery.mapLink">
+            {{ brewery.streetAddress }}, {{ brewery.city }},
+            {{ brewery.state }} {{ brewery.zip }}</a
+          >
         </p>
         <p class="phone">{{ brewery.phone }}</p>
         <p class="email">{{ brewery.email }}</p>
         <p>
-          <a class="link" target="_blank" v-bind:href="brewery.website"
-            >Website</a
-          >
-          |
-          <a class="link" target="_blank" v-bind:href="brewery.mapLink">Map</a>
+          <a class="link" target="_blank" v-bind:href="brewery.website">
+            Website
+          </a>
         </p>
       </div>
       <div class="photo-container">
-        <img class="photo" v-bind:src="brewery.photo" onerror="this.onerror=null; this.src='/icons/altBrewery.jpg'"/>
+        <img
+          class="photo"
+          v-bind:src="brewery.photo"
+          onerror="this.onerror=null; this.src='/icons/altBrewery.jpg'"
+        />
       </div>
       <p class="description">{{ brewery.description }}</p>
     </div>
-    <div class="beer-list-container">
+    <div class="content">
       <hr />
       <div class="beer-list-title-container">
-        <h3 class="beer-list-title">Beer List</h3>
+        <h3 class="title">Beer List</h3>
       </div>
-      <div class="beer-list">
+      <div>
         <beer v-for="beer in beers" v-bind:key="beer.id" v-bind:item="beer" />
       </div>
       <div
@@ -50,7 +54,8 @@
           v-if="this.$store.state.user.role == 'admin'"
           class="addBeer"
           v-bind:to="{ name: 'addBeer', params: { Id: breweryId } }"
-          >Add Beer
+        >
+          Add Beer
         </router-Link>
       </div>
     </div>
@@ -156,12 +161,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #4a2328;
-  border-radius: 10px;
-  color: #fef9e1;
-  padding: 10px;
-  box-shadow: inset;
-  box-shadow: 6px 12px 9px grey;
 }
 
 body {
@@ -182,15 +181,10 @@ body {
 
 .description {
   width: 30vw;
-  text-align: justify;
+  text-align: left;
   font-size: 14pt;
   margin: 20px;
   font-family: ser;
-}
-
-div,
-p {
-  font-family: sans-serif;
 }
 
 p {
@@ -243,36 +237,6 @@ h3 {
   color: blue;
 }
 
-.beer-list-title {
-  font-weight: bold;
-  font-size: 20pt;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-  background-color: #4a2328;
-  color: #fef9e1;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: inset;
-  box-shadow: 6px 12px 9px grey;
-  font-family: serif;
-}
-
-.beer-list-title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.beer-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 35vw;
-}
-
 .addBeer {
   background-color: black;
   border-radius: 25px;
@@ -298,22 +262,14 @@ h3 {
   padding-right: 50px;
   padding-bottom: 25px;
   padding-top: 25px;
-
-  width: 30vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin-bottom: 30px;
 }
 
 hr {
-  width: 55vw;
-  margin: 0;
+    width: 55vw;
   border-color: #4a2328;
-}
-
-.beers {
-  margin-top: 10px;
 }
 </style>

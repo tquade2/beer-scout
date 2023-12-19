@@ -143,6 +143,7 @@ input {
   border: 1px solid black;
   border-radius: 5px;
 }
+
 input:hover,
 input:focus {
   outline-color: #a3cb6f;
@@ -172,6 +173,7 @@ input:focus {
   color: #7da54a;
   font-weight: bold;
 }
+
 .login-in-btn:hover {
   color: #bce685;
 }

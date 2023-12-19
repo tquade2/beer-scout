@@ -17,5 +17,6 @@
   background-size: cover;
   background-position: 100%;
   height: 90vh;
+  border-radius: 10px;
 }
 </style>

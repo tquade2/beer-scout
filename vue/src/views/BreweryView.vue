@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-    <div class="title-container">
-      <h1 class="title">Brewery List</h1>
-    </div>
-    <div class="brewery-container">
+  <div class="content">
+    <h1>Brewery List</h1>
+    <div>
       <brewery
         v-for="brewery in breweries"
         v-bind:key="brewery.id"
@@ -54,27 +52,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-}
-
-.title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.brewery-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-</style>

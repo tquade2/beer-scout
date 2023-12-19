@@ -1,37 +1,91 @@
 <template>
   <div id="app">
-    <div class="nav">
-      <Header />
-    </div>
+    <Header />
     <main>
       <router-view />
     </main>
-    <div id="foot">
-      <Footer />
-    </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
 
-export default { components: { Header, Footer } };
+export default { components: { Header } };
 </script>
 
 <style>
-#capstone-app {
+#app {
   background-color: #fef9e1;
 }
 
-.title {
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #f4a23f;
   color: #fef9e1;
-  box-shadow: 6px 12px 9px black;
+  box-shadow: 8px 8px 8px black;
   border-radius: 10px;
-  height: fit-content;
-  width: fit-content;
+  padding: 10px;
+  font-family: serif;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #c570615c;
+  text-decoration: none;
+  color: #4a2328;
+  font-family: sans-serif;
   padding: 5px;
-  font-size: xx-large;
+  margin: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #4a2328;
+  margin: 0 25px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: #4a2328;
+  color: #fef9e1;
+  font-size: 12pt;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 25px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.brewer-button,
+.admin-button {
+  background-color: black;
+  color: white;
+  font-size: 12pt;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 25px;
+  white-space: nowrap;
 }
 </style>

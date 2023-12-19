@@ -1,7 +1,9 @@
 <template>
   <router-Link v-bind:to="{ name: 'beerInfo', params: { beerId: item.id } }">
-    <div class="beers">
-      <h4 class="name">{{ item.name }} | {{ item.abv }}% | {{ item.type }}</h4>
+    <div class="beerbox">
+      <div class="name">
+        {{ item.name }} | {{ item.abv }}% | {{ item.type }}
+      </div>
       <div class="buttons">
         <button
           v-if="$route.name == 'myBeers'"
@@ -78,40 +80,26 @@ export default {
 </script>
 
 <style scoped>
-.type-abv {
-  text-align: center;
-  margin: 10px;
-  color: black;
-  margin-top: 0;
+.beerbox {
+  background-color: #f59e3476;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  max-width: 400px;
+  min-width: 400px;
+  height: 1em;
 }
+
 .name {
   text-align: center;
   margin-bottom: 0px;
   color: black;
-
   margin-top: 0;
 }
-.description {
-  text-align: center;
-  margin: 10px;
-  color: black;
-}
+
 
 a {
   text-decoration: none;
-}
-
-.beers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4a33f5c;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 5px;
-  text-align: justify;
-  max-width: 400px;
-  min-width: 400px;
 }
 
 .button {

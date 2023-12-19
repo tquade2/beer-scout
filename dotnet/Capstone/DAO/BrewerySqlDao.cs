@@ -64,7 +64,7 @@ namespace Capstone.DAO
         {
             IList<Brewery> breweries = new List<Brewery>();
 
-            string sql = "SELECT * FROM breweries";
+            string sql = "SELECT * FROM breweries ORDER BY name ASC;";
 
             try
             {
