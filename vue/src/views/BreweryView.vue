@@ -1,7 +1,7 @@
 <template>
-  <div class="content">
+  <div class="page">
     <h1>Breweries</h1>
-    <brewery
+    <Brewery
       v-for="brewery in breweries"
       v-bind:key="brewery.id"
       v-bind:item="brewery"

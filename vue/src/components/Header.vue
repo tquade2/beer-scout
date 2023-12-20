@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content">
     <router-link class="nav" v-bind:to="{ name: 'home' }">
       <img class="icon" src="../../icons/beer.png" />
       Home
@@ -27,7 +27,6 @@
       <img class="icon" src="../../icons/hop.png" />
       My Breweries
     </router-link>
-
     <router-link
       class="nav"
       v-bind:to="{ name: 'myBeers' }"
@@ -56,6 +55,7 @@
       Login
     </router-link>
   </div>
+  <hr />
 </template>
 
 <script>
@@ -63,13 +63,23 @@ export default { name: "Header" };
 </script>
 
 <style scoped>
-.container {
+.content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-bottom: 2px solid #4a2328;
-  padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #4a2328;
+  margin: 0 25px;
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 .icon {

@@ -1,14 +1,13 @@
 <template>
-  <div id="home">
-    <main>
-      <h1 class="title">Welcome to BeerScout</h1>
-      <image></image>
-    </main>
+  <div id="home-page">
+    <div>
+      <h1>Welcome to BeerScout</h1>
+    </div>
   </div>
 </template>
 
 <style scoped>
-#home {
+#home-page {
   display: flex;
   justify-content: center;
   align-items: top;

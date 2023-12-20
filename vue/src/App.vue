@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <main>
-      <router-view />
-    </main>
+    <router-view />
   </div>
 </template>
 
@@ -14,36 +12,24 @@ export default { components: { Header } };
 </script>
 
 <style>
-#app {
+html {
   background-color: #fef9e1;
 }
 
-main {
+.page {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   background-color: #f4a23f;
   color: #fef9e1;
   box-shadow: 8px 8px 8px black;
   border-radius: 10px;
   padding: 10px;
   font-family: serif;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  width: 50vw;
 }
 
 .item {
@@ -59,19 +45,6 @@ h1 {
   padding: 10px;
   margin: 10px;
   width: 50%;
-  min-width: 300px;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  color: #4a2328;
-  margin: 0 25px;
-  margin-left: 0;
-  margin-top: 10px;
 }
 
 .button {
@@ -83,6 +56,7 @@ h1 {
   border-radius: 25px;
   white-space: nowrap;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .brewer-button,
@@ -97,7 +71,6 @@ h1 {
 }
 
 hr {
-  width: 95%;
   border-color: #4a2328;
   border-style: solid;
   margin-top: 0;

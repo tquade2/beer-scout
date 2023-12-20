@@ -1,6 +1,6 @@
 <template>
-  <body>
-    <header>
+  <div class="page">
+    <div class="header">
       <img
         class="logo"
         v-bind:src="brewery.logo"
@@ -9,8 +9,17 @@
       <h1 class="title">
         {{ brewery.name }}
       </h1>
-    </header>
+    </div>
     <div class="brewery-info">
+      <div class="photo-container">
+        <img
+          class="photo"
+          v-bind:src="brewery.photo"
+          onerror="this.onerror=null; this.src='/icons/altBrewery.jpg'"
+        />
+      </div>
+      <p class="description">{{ brewery.description }}</p>
+      <hr id="info-line" />
       <div class="contact-info">
         <p class="address">
           <a class="link" target="_blank" v-bind:href="brewery.mapLink">
@@ -26,25 +35,15 @@
           </a>
         </p>
       </div>
-      <div class="photo-container">
-        <img
-          class="photo"
-          v-bind:src="brewery.photo"
-          onerror="this.onerror=null; this.src='/icons/altBrewery.jpg'"
-        />
-      </div>
-      <p class="description">{{ brewery.description }}</p>
     </div>
+    <hr id="dividing-line" />
     <div class="content">
-      <hr />
-      <div class="beer-list-title-container">
-        <h3 class="title">Beer List</h3>
-      </div>
+      <h1>Beers</h1>
       <div>
         <beer v-for="beer in beers" v-bind:key="beer.id" v-bind:item="beer" />
       </div>
       <div
-        class="addBeer-container"
+        class="buttons"
         v-if="
           this.$store.state.user.role == 'admin' ||
           this.$store.state.user.role == 'brewery'
@@ -52,14 +51,14 @@
       >
         <router-Link
           v-if="this.$store.state.user.role == 'admin'"
-          class="addBeer"
+          class="brewer-button"
           v-bind:to="{ name: 'addBeer', params: { Id: breweryId } }"
         >
           Add Beer
         </router-Link>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -156,18 +155,23 @@ export default {
 </script>
 
 <style scoped>
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 
-body {
+.content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.page {
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -180,7 +184,7 @@ body {
 }
 
 .description {
-  width: 30vw;
+  width: 35vw;
   text-align: left;
   font-size: 14pt;
   margin: 20px;
@@ -202,7 +206,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
   margin-top: 10px;
   font-size: 14pt;
   flex-wrap: wrap;
@@ -237,19 +240,7 @@ h3 {
   color: blue;
 }
 
-.addBeer {
-  background-color: black;
-  border-radius: 25px;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 16px 31px;
-  text-decoration: none;
-}
-
-.addBeer-container {
+.buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -268,8 +259,13 @@ h3 {
   margin-bottom: 30px;
 }
 
-hr {
-    width: 55vw;
+#info-line {
+  width: 40vw;
+  border-color: #4a2328;
+}
+
+#dividing-line {
+  width: 60vw;
   border-color: #4a2328;
 }
 </style>

@@ -40,6 +40,11 @@ export default {
 </script>
 
 <style scoped>
+.item {
+  width: 30%;
+  min-width: 250px;
+}
+
 h3,
 p {
   margin: 5px;
@@ -63,5 +68,9 @@ p {
 .logo {
   height: 75px;
   margin: 10px;
+}
+
+hr {
+  width: 95%;
 }
 </style>
