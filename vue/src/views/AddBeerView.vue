@@ -15,11 +15,11 @@
       <div class="input">
         <label for="type">Type</label>
         <input
-        type="text"
-        name="type"
-        id="type"
-        v-model="newBeer.type"
-        required
+          type="text"
+          name="type"
+          id="type"
+          v-model="newBeer.type"
+          required
         />
       </div>
       <div class="input">
@@ -36,7 +36,7 @@
           required
         />
       </div>
-      
+
       <button type="submit">Add Beer</button>
       <button type="button" v-on:click="cancelForm">Cancel</button>
     </form>
@@ -118,7 +118,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   max-width: 1000px; /* Set your desired maximum width */
@@ -143,7 +143,7 @@ form {
   border-radius: 25px;
   box-shadow: inset;
   box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.1);
- background-color: white;
+  background-color: white;
 }
 
 textarea {
@@ -190,5 +190,4 @@ button[type="button"] {
   margin-left: 10px;
   justify-content: center;
 }
-
 </style>
