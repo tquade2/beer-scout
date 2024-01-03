@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="page">
     <h1>Beers</h1>
     <beer v-for="beer in beers" v-bind:key="beer.id" v-bind:item="beer" />
   </div>

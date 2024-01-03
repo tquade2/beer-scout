@@ -15,20 +15,17 @@
     </p>
     <p>{{ item.phone }}</p>
     <p>{{ item.email }}</p>
-    <div class="buttons">
-      <router-Link
-        class="button"
-        v-bind:to="{ name: 'breweryInfo', params: { breweryId: item.id } }"
-        >More Info
-      </router-Link>
-      <p v-if="$route.name == 'myBreweries'">
-        <router-Link
-          class="brewer-button"
-          v-bind:to="{ name: 'editBrewery', params: { breweryId: item.id } }"
-          >Edit Brewery
-        </router-Link>
-      </p>
-    </div>
+    <router-Link
+      class="button"
+      v-bind:to="{ name: 'breweryInfo', params: { breweryId: item.id } }"
+      >More Info
+    </router-Link>
+    <router-Link
+      v-if="$route.name == 'myBreweries'"
+      class="brewer-button"
+      v-bind:to="{ name: 'editBrewery', params: { breweryId: item.id } }"
+      >Edit Brewery
+    </router-Link>
   </div>
 </template>
 
@@ -40,11 +37,6 @@ export default {
 </script>
 
 <style scoped>
-.item {
-  width: 30%;
-  min-width: 250px;
-}
-
 h3,
 p {
   margin: 5px;
@@ -56,12 +48,6 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 10px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
   margin: 10px;
 }
 

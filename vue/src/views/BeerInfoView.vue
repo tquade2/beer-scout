@@ -1,25 +1,18 @@
 <template>
-  <div class="everything">
-    <h2 class="beer-title">
-      {{ beer.name }} | {{ beer.abv }}% | {{ beer.type }}
-    </h2>
-    <section class="info">
-      <h4>Description</h4>
-      <div class="description">{{ beer.description }}</div>
-    </section>
-    <div class="addReview-container">
-      <router-Link
-        v-if="
-          this.$store.state.user.role == 'admin' ||
-          this.$store.state.user.role == 'user'
-        "
-        class="addReview"
-        v-bind:to="{ name: 'addReview', params: { Id: breweryId } }"
-        >Add a Review
-      </router-Link>
-    </div>
+  <div class="page">
+    <h1>{{ beer.name }} | {{ beer.abv }}% | {{ beer.type }}</h1>
+    <div class="description">{{ beer.description }}</div>
+    <router-Link
+      v-if="
+        this.$store.state.user.role == 'admin' ||
+        this.$store.state.user.role == 'user'
+      "
+      class="button"
+      v-bind:to="{ name: 'addReview', params: { Id: breweryId } }"
+      >Add a Review
+    </router-Link>
     <section class="reviews" v-if="reviews.length > 0">
-      <h3 class="review-list-title">Reviews</h3>
+      <h3 class="reviews-title">Reviews</h3>
       <review
         v-for="review in reviews"
         v-bind:key="review.id"
@@ -27,7 +20,7 @@
       ></review>
     </section>
     <section v-if="reviews.length == 0">
-      <p class="no-review">No reviews to display</p>
+      <h2>No reviews yet</h2>
     </section>
   </div>
 </template>
@@ -107,46 +100,18 @@ export default {
   padding-top: 10px;
   margin: 10px;
   border-radius: 10px;
-  min-width: 80%;
+  min-width: 50%;
   background-color: #dcdcd9;
 }
 
-.review-list-title {
+.reviews-title {
   text-align: center;
-}
-
-.everything {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffc1765c;
-  border-radius: 10px;
-  padding: 40px;
-}
-.no-review {
-  font-weight: bolder;
-}
-.addReview {
-  text-decoration: none;
-  background-color: #a3cb6f;
-  border-radius: 25px;
-  color: white;
-  padding: 5px;
-}
-.addReview:hover {
-  background-color: #b5e17b;
-}
-.beer-title {
   margin: 10px;
 }
 
-h4 {
-  margin: 10px;
-}
-.info {
+.description {
   text-align: center;
   font-family: sans-serif;
-  padding-bottom: 20px;
+  margin: 10px;
 }
 </style>

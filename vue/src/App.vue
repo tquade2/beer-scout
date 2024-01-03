@@ -30,6 +30,8 @@ h1 {
   border-radius: 10px;
   padding: 10px;
   font-family: serif;
+  text-align: center;
+  width: fit-content;
 }
 
 .item {
@@ -44,7 +46,8 @@ h1 {
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-  width: 50%;
+  width: 40%;
+  max-width: 450px;
 }
 
 .button {
@@ -57,6 +60,7 @@ h1 {
   white-space: nowrap;
   text-decoration: none;
   font-weight: bold;
+  margin: 10px;
 }
 
 .brewer-button,
@@ -68,6 +72,8 @@ h1 {
   text-decoration: none;
   border-radius: 25px;
   white-space: nowrap;
+  font-family: sans-serif;
+  margin: 10px;
 }
 
 hr {

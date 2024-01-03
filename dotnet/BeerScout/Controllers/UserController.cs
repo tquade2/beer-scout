@@ -8,13 +8,13 @@ namespace Capstone.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly ITokenGenerator tokenGenerator;
         private readonly IPasswordHasher passwordHasher;
         private readonly IUserDao userDao;
 
-        public LoginController(ITokenGenerator tokenGenerator, IPasswordHasher passwordHasher, IUserDao userDao)
+        public UserController(ITokenGenerator tokenGenerator, IPasswordHasher passwordHasher, IUserDao userDao)
         {
             this.tokenGenerator = tokenGenerator;
             this.passwordHasher = passwordHasher;
@@ -28,7 +28,6 @@ namespace Capstone.Controllers
             return Ok($"Server is ready with {userCount} user(s).");
         }
 
-        //GET /whoami
         [HttpGet("/whoami")]
         public ActionResult<string> WhoAmI()
         {
@@ -43,7 +42,6 @@ namespace Capstone.Controllers
             }
         }
 
-
         [HttpPost("/login")]
         public IActionResult Authenticate(LoginUser userParam)
         {
@@ -53,7 +51,7 @@ namespace Capstone.Controllers
             User user;
             // Get the user by username
             try
-            { 
+            {
                 user = userDao.GetUserByUsername(userParam.Username);
             }
             catch (DaoException)

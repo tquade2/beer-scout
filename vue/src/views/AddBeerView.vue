@@ -78,26 +78,6 @@ export default {
           }
         });
     },
-    //   getBreweryId(id){
-    //     BreweryService
-    //     .getBrewery(id)
-    //     .then((response) => {
-    //       console.log("Reached loadBrewery in BreweryInfoView");
-    //       console.log(response);
-    //       this.brewery = response.data;
-    //     })
-    //     .catch((error) => {
-    //       if (error.response) {
-    //         console.log("Error loading brewery: ", error.response.status);
-    //       } else if (error.request) {
-    //         console.log(
-    //           "Error loading brewery: unable to communicate to server"
-    //         );
-    //       } else {
-    //         console.log("Error loading brewery: make request");
-    //       }
-    //     });
-    //   },
     cancelForm() {
       this.newBeer = {};
       this.showMessage = false;
@@ -121,21 +101,16 @@ h1 {
 body {
   display: flex;
   justify-content: center;
-  max-width: 1000px; /* Set your desired maximum width */
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px; /* Adjust padding for better spacing */
-  /* border: 1px solid #ccc;
-  border-radius: 25px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff; */
+  padding: 60px;
 }
 
 form {
-  max-width: 600px; /* Set your desired maximum width */
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  /* padding: 60px; Adjust padding for better spacing */
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;

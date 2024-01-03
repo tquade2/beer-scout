@@ -7,16 +7,16 @@
       <div class="buttons">
         <button
           v-if="$route.name == 'myBeers'"
-          class="button"
+          class="brewer-button"
           v-on:click="DeleteABeer(item.id)"
         >
-          Delete
+          Delete Beer
         </button>
         <router-Link
-          class="button"
+          class="brewer-button"
           v-if="$route.name == 'myBeers'"
           v-bind:to="{ name: 'editBeer', params: { beerId: item.id } }"
-          >Edit
+          >Edit Beer
         </router-Link>
       </div>
       <div>
@@ -81,48 +81,27 @@ export default {
 
 <style scoped>
 .beerbox {
+  display: flex;
+  flex-direction: column;
   background-color: #f59e3476;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
   margin: 5px;
   max-width: 400px;
   min-width: 400px;
-  height: 1em;
+  align-items: center;
+  justify-content: center;
 }
 
 .name {
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   color: black;
   margin-top: 0;
+  font-size: large;
 }
-
 
 a {
   text-decoration: none;
-}
-
-.button {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 25px;
-  border: none;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: small;
-  margin: 5px;
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 10px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
 }
 </style>

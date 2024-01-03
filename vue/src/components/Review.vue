@@ -1,8 +1,8 @@
 <template>
   <div class="review">
-    <h4 class="info">{{ item.title }}</h4>
-    <div class="info" v-html="createStarRating()"></div>
-    <p>{{ item.description }}</p>
+    <h4 class="review-title">{{ item.title }}</h4>
+    <p class="description">{{ item.description }}</p>
+    <div class="rating" v-html="createStarRating()"></div>
   </div>
 </template>
 
@@ -34,16 +34,20 @@ export default {
   min-width: 60%;
 }
 
-.review h4 {
+.review-title {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin: 10px;
   color: #333;
 }
 
-.review p {
+.description {
   font-size: 16px;
-  margin-bottom: 8px;
+  margin: 10px;
   color: #555;
+}
+
+.rating {
+  margin: 10px;
 }
 
 .beer-rating-icon {
@@ -51,16 +55,4 @@ export default {
   height: 20px;
   margin-right: 5px;
 }
-.info{
-  text-align: center;
-}
-
-
-
-
-/* .beer-icon{
- align-items: center;
-  height: 40px;
-} */
-
 </style>
