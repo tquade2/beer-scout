@@ -1,10 +1,10 @@
-# Capstone Starter Project
+# BeerScout Backend
 
 ## Database
 
-Inside the `<project-root>/database/` directory, there's a SQL script called `capstone.sql` that you can run to build and rebuild a Microsoft SQL Server database for the capstone project.
+`database/create_database.sql` is a SQL script that you can run to build SQL Server database for BrewScout.
 
-The SQL script drops the database if it exists and creates a new database called `final_capstone`. You may choose to modify the script to change the database name, or add more tables and data to it.
+The SQL script drops the database if it exists and creates a new database called `beer_scout_db`. You may choose to modify the script to change the database name, or add more tables and data to it.
 
 If you change the database name, be sure to update the connection string in the server project. See the [Connection string](#connection-string) section for more about this.
 
