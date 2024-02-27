@@ -2,7 +2,7 @@
 
 This project marked the culmination of my efforts, alongside two talented collaborators, [Daniel Kennedy](https://www.linkedin.com/in/daniel-kennedy-/) and [Garrett Choate](https://www.linkedin.com/in/garrettchoate/), as our final capstone project during our time at Tech Elevator's coding bootcamp in Columbus, OH.
 
-This project is a full-stack application that uses Vue.js for the frontend, C#/.NET for the backend, and MS SQL Server Managment Studio (SSMS) for the database. The application is a beer scouting platform where users and brewers can view, add, and edit information about beers and breweries.
+This project is a full-stack application that uses Vue.js for the frontend, C#/.NET for the backend, and SQL Server for the database. The application is a beer scouting platform where users and brewers can view, add, and edit information about beers and breweries.
 
 ## Frontend
 
