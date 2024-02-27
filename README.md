@@ -6,16 +6,12 @@ This project is a full-stack application that uses Vue.js for the frontend, C#/.
 
 ## Frontend
 
-The frontend of the application is built with Vue.js and is located in the `vue` directory. It uses Vuex for state management, as mentioned in `vue/README.md`. The application's views are located in `vue/src/views` and include pages for viewing, adding, and editing beers and breweries, as well as user registration and login.
+The frontend of the application is built with Vue.js and is located in the `frontend` directory. It uses Vuex for state management, as mentioned in `frontend/README.md`. The application's views are located in `frontend/src/views` and include pages for viewing, adding, and editing beers and breweries, as well as user registration and login.
 
 ## Backend
 
-The backend of the application is built with C#/.NET and is located in the `dotnet` directory. It includes a BeerScout project, as seen in `dotnet/BeerScout/BeerScout.csproj`. The backend handles API requests from the frontend and interacts with the database. It also includes security features, as mentioned in `dotnet/README.md`.
+The backend of the application is built with C#/.NET and is located in the `backend` directory. It includes a BeerScout project, as seen in `backend/BeerScout/BeerScout.csproj`. The backend handles API requests from the frontend and interacts with the database. It also includes security features, as mentioned in `backend/README.md`.
 
 ## Database
 
 The database for the application is built with Microsoft SQL Server Managment Studio (SSMS). The SQL script for the database is located in `database/capstone.sql`.
-
-## Development
-
-For development instructions, please refer to the README files in the `vue` and `dotnet` directories.
